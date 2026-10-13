@@ -1,0 +1,1 @@
+{"name":"framework-navigator","version":"0.1.0","private":true,"type":"module","engines":{"node":">=22.13"},"scripts":{"start":"node scripts/serve.mjs","catalog":"node scripts/build-catalog.mjs","test":"node --test --test-concurrency=1 tests/*.test.mjs"}}

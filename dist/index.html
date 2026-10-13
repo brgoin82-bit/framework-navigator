@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Find cybersecurity, governance, risk, privacy, cloud, AI and data-center frameworks, standards and assurance programs. A free independent research tool.">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; worker-src 'self'; connect-src 'self'; img-src 'self' data:; object-src 'none'; base-uri 'none'; form-action 'self'">
+  <title>Framework Navigator — Find the guidance you need</title>
+  <link rel="stylesheet" href="./styles.css"><link rel="stylesheet" href="./appearance.css"><script type="module" src="./app.mjs"></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to frameworks</a>
+  <header class="topbar"><a class="brand" href="./" aria-label="Framework Navigator home"><span class="brand-icon" aria-hidden="true">F<span>↗</span></span><span>Framework Navigator<small>AN INDEPENDENT RESEARCH TOOL</small></span></a><nav aria-label="Main">
+    <div class="appearance-controls"><button id="theme-toggle" class="quiet" aria-pressed="false">Dark high contrast</button>
+      <div class="accent-control"><button id="accent-toggle" class="quiet" aria-expanded="false" aria-controls="accent-panel"><span class="accent-swatch" aria-hidden="true"></span>Accent</button>
+        <section id="accent-panel" class="accent-panel" aria-labelledby="accent-title" hidden>
+          <h2 id="accent-title">Make it your color.</h2><p>Changes preview instantly. Text stays readable.</p>
+          <div class="accent-presets" aria-label="Quick accent colors"><button type="button" data-accent="#006d67">Teal</button><button type="button" data-accent="#7c3aed">Violet</button><button type="button" data-accent="#e91e87">Rose</button><button type="button" data-accent="#e5a800">Gold</button><button type="button" data-accent="#2563eb">Cobalt</button></div>
+          <label for="accent-hue">Hue</label><input id="accent-hue" type="range" min="0" max="359" step="1" value="177">
+          <label for="accent-saturation">Saturation</label><input id="accent-saturation" type="range" min="0" max="100" step="1" value="100">
+          <label for="accent-lightness">Lightness</label><input id="accent-lightness" type="range" min="0" max="100" step="1" value="21">
+          <label for="accent-color">Hex color</label><input id="accent-color" type="text" value="#006D67" maxlength="7" pattern="#[0-9a-fA-F]{6}" autocomplete="off" spellcheck="false" aria-describedby="appearance-status">
+          <div id="accent-preview" class="accent-preview">Live preview</div><p id="appearance-status" role="status" aria-live="polite"></p><button id="accent-done" class="primary" type="button">Done</button>
+        </section>
+      </div>
+    </div><button id="refresh" class="quiet" disabled>↻ Refresh catalog</button><button id="share" class="quiet">Copy share link ↗</button><button id="about" class="quiet">About &amp; coverage</button><span class="free-badge">Free. No account needed.</span></nav></header>
+  <div class="layout">
+    <aside class="sidebar" aria-label="Subject area filters"><p class="eyebrow">THE KNOWLEDGE LIBRARY</p><h2>Explore by subject</h2><p class="sidebar-hint">Start broad. Find your focus.</p><div id="areas"><p>Loading subject areas…</p></div><div class="sidebar-foot"><span aria-hidden="true">↗</span><p><strong>Go straight to the source.</strong><br>Every entry links to its official publisher or publisher directory.</p></div></aside>
+    <main id="main">
+      <section class="hero"><p class="eyebrow accent">TRUSTED FRAMEWORKS. EASIER TO EXPLORE.</p><h1>Find the framework<br>that fits your needs<span>.</span></h1><p class="intro">You don’t need the exact title. Search a topic, a publication number,<br class="desktop"> or the words you know. We’ll help you get there.</p>
+        <form id="search-form" role="search"><label for="search" class="sr-only">Search frameworks and standards</label><div class="search-wrap"><span class="search-icon" aria-hidden="true">⌕</span><input id="search" type="search" autocomplete="off" spellcheck="false" maxlength="200" placeholder="Try “cloud”, “PCI”, “ISO 27001”, or “governance”…" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="suggestions" aria-describedby="search-hint" disabled><button id="clear-search" type="button" aria-label="Clear search" hidden>×</button><button class="primary" id="search-button" type="submit" disabled>Search <span aria-hidden="true">↗</span></button></div><ul id="suggestions" role="listbox" aria-label="Search suggestions" hidden></ul></form>
+        <p id="search-hint" class="search-hint">Partial words, common abbreviations and small typos welcome. Use ↑ ↓ and Enter to choose a suggestion.</p>
+        <div class="examples" aria-label="Try a search"><span>Try a topic</span><button data-query="grc">Governance &amp; GRC</button><button data-query="artificial intelligence">AI governance</button><button data-query="risk management">Risk management</button><button data-query="data center">Data centers</button></div>
+      </section>
+      <section class="catalog-status" aria-label="Catalog coverage"><div><span class="status-marker" aria-hidden="true"></span><strong id="catalog-count">Loading the framework library…</strong><span id="catalog-release"></span></div><button id="coverage-button">What’s covered? ↗</button></section>
+      <p class="notice">Free app. Publisher documents, training and assessments may have separate costs. A framework is not automatically a legal requirement. Always verify edition and applicability at the official source.</p>
+      <section class="results-section" aria-labelledby="results-heading"><div class="results-heading"><div><p class="eyebrow" id="selection-label">ALL SUBJECT AREAS</p><h2 id="results-heading">Frameworks &amp; standards</h2></div><span id="result-count" role="status" aria-live="polite">Preparing your library…</span></div>
+        <div class="filters"><div><label for="publisher">Publisher</label><select id="publisher" disabled><option value="">All publishers</option></select></div><div><label for="type">Resource type</label><select id="type" disabled><option value="">All resource types</option></select></div><div><label for="access">Access to material</label><select id="access" disabled><option value="">All access types</option></select></div><div><label for="region">Region / context</label><select id="region" disabled><option value="">All regions</option></select></div><div><label for="sort">Sort by</label><select id="sort"><option value="relevance">Best match / A–Z</option><option value="title">Title A–Z</option><option value="publisher">Publisher A–Z</option></select></div><button id="reset" class="quiet reset">Reset filters</button></div>
+        <p id="filter-error" class="error" role="alert" hidden></p><p id="related" class="notice" hidden>No records matched every search word. These related results match some of your words.</p><div id="results" aria-busy="true"><div class="loading"><span class="loader" aria-hidden="true"></span>Loading the curated framework library. Your searches stay in your browser.</div></div>
+        <div class="pagination"><button id="previous" class="quiet" disabled>← Previous</button><span id="page-label">Page 1</span><button id="next" class="quiet" disabled>Next →</button></div>
+      </section>
+      <footer>Independent tool. No publisher endorsement or certification implied. <a href="https://nist-navigator.brgoin82.chatgpt.site" target="_blank" rel="noopener noreferrer">Open NIST Navigator ↗</a><p>Curated framework families—not an exhaustive registry of every framework or edition. Summaries are discovery aids, not full standards or compliance advice.</p></footer>
+    </main>
+  </div>
+  <div id="toast" role="status" aria-live="polite" hidden></div>
+  <dialog id="coverage"><div class="dialog-head"><p class="eyebrow">TRANSPARENT BY DESIGN</p><button id="close-coverage" class="quiet" aria-label="Close coverage information">×</button></div><h2>Know what you’re searching.</h2><p id="coverage-text"></p><dl id="coverage-details"></dl><h3>Frameworks are not all the same thing</h3><p>Resource type distinguishes frameworks, standards, control catalogs, guidance, maturity models, assurance programs, knowledge bases and risk models. Regional tags describe context—not a ruling that the resource is legally mandatory for you.</p><h3>Coverage and maintenance</h3><p>No universal registry establishes every framework ever created. This is a curated, editable library of major families, not every sector, proprietary model or historical edition. Source links can point to official family directories; use the identifier shown to locate the exact resource. Edition notes are not a claim of continuous currency.</p><p>Refresh reloads the owner-published catalog. It does not discover new frameworks or automatically update publisher editions. There is no unattended AI automation or paid API. Source material retains its publisher’s license.</p><p id="maintenance-text"></p></dialog>
+</body></html>
