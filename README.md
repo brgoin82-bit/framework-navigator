@@ -1,4 +1,4 @@
-# Framework Navigator 0.1.0
+# Framework Navigator 0.1.1
 
 A free independent reference library for cybersecurity, governance, risk, privacy, cloud, AI, application security, supply chains, operations and data-center resources. It deliberately follows the NIST Navigator layout, including the repaired dark high-contrast and custom-accent controls.
 
@@ -100,3 +100,12 @@ Actual local browser checks covered joined-number search, keyboard subject sugge
 - Next Recommended Review: before new publisher destinations, data imports, authentication or hosting changes.
 
 Primary starting sources include [NIST](https://www.nist.gov/cyberframework), [ISO families](https://committee.iso.org/standard/iso-iec-27000-family), [OWASP](https://owasp.org/projects), [CSA CCM](https://cloudsecurityalliance.org/artifacts/cloud-controls-matrix-v4-1), [SCF](https://securecontrolsframework.com/free-content), [Open FAIR](https://www.opengroup.org/open-fair), [PCI SSC](https://www.pcisecuritystandards.org/document_library/), and the individual official references in the source catalog. This app is not endorsed by those publishers.
+
+
+## Documentation and versioning update — October 26, 2026
+
+Release **0.1.1** packages documentation and version metadata. Start with the [complete documentation index](docs/INDEX.md), [release notes](docs/RELEASE-NOTES.md) and [version policy](docs/VERSIONING.md). All existing guides remain available.
+
+The fresh sequential test run passed **30 tests** on Windows with Node.js 24.21.0. Application modules and catalog contents are unchanged. Earlier review dates and browser observations above remain historical; this update does not renew a security audit or publisher-edition review.
+
+Public repository: [brgoin82-bit/framework-navigator](https://github.com/brgoin82-bit/framework-navigator). The package's `private: true` prevents accidental npm publication; it does not make the GitHub repository private.

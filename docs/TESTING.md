@@ -18,3 +18,10 @@ Browser checks observed:
 - A narrow in-app-browser view showed responsive header, horizontally scrollable subject choices and usable search controls.
 
 Not verified: every publisher's latest edition, every reference URL's continued availability, all historical or proprietary frameworks, every browser/OS, full screen-reader operation, prolonged load, disk-full/power-loss simulation or a complete penetration test. Unit contrast checks cover defined surfaces, not formal accessibility certification. No deep scanner, extra agent or recurring AI process ran.
+
+
+## Documentation release 0.1.1 — October 26, 2026
+
+Fresh run on Windows PowerShell with Node.js 24.21.0: `node --test --test-concurrency=1 tests/*.test.mjs` — **30 passed, zero failed/cancelled/skipped**. No dependency installation was needed.
+
+Application modules and catalog bytes match pre-update commit `3303f22`. All local Markdown file links were checked. Local HTTP smoke checks verified the index, catalog, rejection of source-file access and rejection of POST. No new hosted or full browser/accessibility verification was performed. Historical observations above remain historical.

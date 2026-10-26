@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.1.1 — 2026-10-26
+
+- Added documentation index, version/release policy, contribution instructions and security reporting guidance.
+- Added user, operations/recovery and architecture guides.
+- Verified 30 passing sequential tests; application code and catalog remain unchanged.
+- Advanced package metadata for this documentation patch; see [release notes](docs/RELEASE-NOTES.md).
+
 ## 0.1.0 — 2026-10-13
 
 - Created a separate Framework Navigator using the NIST Navigator layout and repaired appearance controls.
